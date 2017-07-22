@@ -4,4 +4,8 @@
 
 
 源代码地址 : https://github.com/liuyubobobo/Play-with-Swift-2 
-慕课网学习地址 :
+慕课网学习地址 :  http://www.imooc.com/t/108955
+
+
+仅对原作者提供代码进行 swift3.0 和 swift4.0 适配 使其能够正常运行 不做其他修改 大家可以对照视频中代码进行对比.
+
