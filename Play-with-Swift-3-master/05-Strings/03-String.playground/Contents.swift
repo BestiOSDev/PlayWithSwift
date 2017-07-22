@@ -45,6 +45,8 @@ str[startIndex..<spaceIndex]
 //swift2: let range = startIndex..<spaceIndex.predecessor()
 let range = startIndex..<str.index(before: spaceIndex)
 
+//Swift4.0 简写语法 一般从0位置开始可以忽略不写 直接 ..< 或 ... 
+let range2 = ..<str.index(before: spaceIndex)
 
 // 在Swift3中，API的命名原则被大幅度调整。大多数函数的名字发生了改变。不过使用方法基本相同。
 

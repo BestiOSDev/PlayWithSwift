@@ -76,6 +76,6 @@ func * (left: Vector3, a: Double) -> Vector3{
     return Vector3(x: left.x * a, y: left.y * a, z: left.z * a)
 }
 
-func += (inout left: Vector3, right: Vector3){
+func += ( left: inout Vector3, right: Vector3){
     left = left + right
 }

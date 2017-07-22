@@ -8,41 +8,42 @@ internal enum Theme{
 }
 
 internal class UI{
-    
+
     private var fontColor: UIColor!
     private var backgroundColor: UIColor!
     var themeMode: Theme = .DayMode{
         didSet{
-            self.changeTheme(self.themeMode)
+            changeTheme(themeMode: self.themeMode)
         }
     }
-    
+
     init(){
         self.themeMode = .DayMode
-        self.changeTheme(self.themeMode)
+        self.changeTheme(themeMode: self.themeMode)
     }
-    
+
     init(themeMode: Theme){
         self.themeMode = themeMode
-        self.changeTheme(themeMode)
+        self.changeTheme(themeMode: themeMode)
     }
-    
+
     private func changeTheme( themeMode: Theme ){
         switch(themeMode){
         case .DayMode:
-            fontColor = UIColor.blackColor()
-            backgroundColor = UIColor.whiteColor()
+            fontColor = UIColor.black
+            backgroundColor = UIColor.white
         case .NightMode:
-            fontColor = UIColor.whiteColor()
-            backgroundColor = UIColor.blackColor()
+            fontColor = UIColor.white
+            backgroundColor = UIColor.black
         }
     }
-    
+
     func show(){
-        print("The font color is \(fontColor == UIColor.whiteColor() ? "WHITE" : "BLACK" )")
-        print("The background color is \(backgroundColor == UIColor.whiteColor() ? "WHITE" : "BLACK")")
+        print("The font color is \(fontColor == UIColor.white ? "WHITE" : "BLACK" )")
+        print("The background color is \(backgroundColor == UIColor.white ? "WHITE" : "BLACK")")
     }
 }
+
 
 
 

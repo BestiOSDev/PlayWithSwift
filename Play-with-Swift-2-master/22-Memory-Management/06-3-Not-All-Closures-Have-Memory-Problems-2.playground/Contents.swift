@@ -5,7 +5,7 @@ import UIKit
 class SmartAirConditioner{
     
     var temperature: Int = 26
-    var temperatureChange: ((Int) -> ())!
+    var temperatureChange: ((Int) -> Void)!
     
     init(){
         temperatureChange = { newTemperature in

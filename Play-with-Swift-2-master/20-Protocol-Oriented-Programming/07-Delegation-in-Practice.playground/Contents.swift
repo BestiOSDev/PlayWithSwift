@@ -135,11 +135,11 @@ class RockPaperScissors: SinglePlayerTurnBasedGame, TurnBasedGameDelegate{
         print("Your:",yourShape)
         print("Other:",otherShape)
         
-        if yourShape.beat(otherShape){
+        if yourShape.beat(shape: otherShape){
             print("You win this round")
             wins += 1
         }
-        else if otherShape.beat(yourShape){
+        else if otherShape.beat(shape: yourShape){
             print("You lose this round")
             otherWins += 1
         }

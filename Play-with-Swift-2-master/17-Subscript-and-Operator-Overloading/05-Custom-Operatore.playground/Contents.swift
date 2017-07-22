@@ -75,7 +75,7 @@ func * (left: Vector3, a: Double) -> Vector3{
     return Vector3(x: left.x * a, y: left.y * a, z: left.z * a)
 }
 
-func += (inout left: Vector3, right: Vector3){
+func += ( left: inout Vector3, right: Vector3){
     left = left + right
 }
 
@@ -85,16 +85,16 @@ func += (inout left: Vector3, right: Vector3){
 // https://developer.apple.com/library/ios/documentation/Swift/Reference/Swift_StandardLibrary_Operators/index.html#//apple_ref/doc/uid/TP40016054
 
 
-postfix operator +++ {}
-postfix func +++ (inout vector: Vector3) -> Vector3{
+postfix operator +++
+postfix func +++ ( vector:inout Vector3) -> Vector3{
     
     vector += Vector3(x: 1.0, y: 1.0, z: 1.0)
     return vector
 }
 
 
-prefix operator +++ {}
-prefix func +++ (inout vector: Vector3) -> Vector3{
+prefix operator +++
+prefix func +++ ( vector : inout Vector3) -> Vector3{
     
     let ret = vector
     vector += Vector3(x: 1.0, y: 1.0, z: 1.0)
@@ -102,7 +102,7 @@ prefix func +++ (inout vector: Vector3) -> Vector3{
 }
 
 
-infix operator ^ {}
+infix operator ^
 //infix operator ^ {associativity left precedence 140}
 func ^ (left: Vector3, right: Vector3) -> Double{
     
@@ -124,6 +124,7 @@ func **(x: Double, p:Double) -> Double{
 }
 
 2**3
-2**3**2
-1+2**3**2
-5*2**3**2
+//2**3**2
+//1+2**3**2
+//5*2**3**2
+

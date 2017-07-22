@@ -23,12 +23,12 @@ extension Int{
         }
     }
     
-    func stride(to end: Int, by stride: Int, task: (Int) -> Void ){
-        
-        for i in self.stride(to: end, by: stride){
-            task(i)
-        }
-    }
+//    func stride(to end: Int, by stride: Int, task: (Int) -> Void ){
+//
+//        for i in stride(from: self, through: end, by: stride) {
+//            task(i)
+//        }
+//    }
 }
 
 let num = 8
@@ -42,19 +42,20 @@ index.inRange(closedLeft: 0, openedRight: str.characters.count)
     print("Hello, Swift")
 }
 
-for i in 2.stride(to: 10, by: 2){
+
+for i in stride(from: 2, to: 10, by: 2){
     print(i)
 }
 
-for i in 2.stride(through: 10, by: 2){
+
+for i in stride(from: 2, through: 10, by: 2) {
     print(i)
 }
 
-2.stride(to: 10, by: 2){ num in
-    print(num*num)
-}
-
-
+//2.strideInt(to: 10, by: 2){ num in
+//    print(num*num)
+//}
+//
 // Int还有很多可以做enxtension的地方
 // 如 12345[2]
 // 如 toBinary, toHex

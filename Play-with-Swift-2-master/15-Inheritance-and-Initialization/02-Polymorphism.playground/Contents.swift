@@ -51,7 +51,7 @@ final class Warrior: User{
 class Monster: Avatar{
     
     func attack( user: User , amount: Int ){
-        user.beAttacked(amount)
+        user.beAttacked(attack: amount)
     }
 }
 
@@ -77,10 +77,10 @@ func printBasicInfo( avatar: Avatar ){
     print("======")
 }
 
-printBasicInfo(player1)
-printBasicInfo(player2)
-printBasicInfo(zombie)
-printBasicInfo(monster)
+printBasicInfo(avatar: player1)
+printBasicInfo(avatar: player2)
+printBasicInfo(avatar: zombie)
+printBasicInfo(avatar: monster)
 
 
 let avatarArr: [Avatar] = [ player1 , player2 , zombie , monster ]

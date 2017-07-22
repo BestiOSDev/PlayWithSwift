@@ -51,7 +51,7 @@ class User: Avatar{
         
         // 进一步完善
         if group == ""{
-            self.getScore(-10)
+            self.getScore(score: -10)
         }
     }
     
@@ -62,7 +62,7 @@ class User: Avatar{
     }
     
     static func generateUserName() -> String{
-        return "Player" + String(rand()%1_000_000)
+        return "Player" + String(Int(arc4random_uniform(1_000_000)))
     }
     
     final func getScore(score: Int){
@@ -90,7 +90,7 @@ final class Magician: User {
             }
         }
         
-        let group = Magician.houses[random()%4]
+        let group = Magician.houses[Int(arc4random_uniform(4))]
         super.init(name: name, group: group)
     }
     
@@ -113,7 +113,7 @@ final class Warrior: User{
     }
     
     convenience override init(name: String, group: String) {
-        let weapon = Warrior.weapons[random()%3]
+        let weapon = Warrior.weapons[Int(arc4random_uniform(3))]
         self.init(name: name, group: group, weapon: weapon)
     }
     

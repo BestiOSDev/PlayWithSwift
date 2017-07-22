@@ -29,17 +29,25 @@ let coolGuy = "\u{1F60E}"
 // String对Unicode的支持
 var coolLetters = "abc"
 coolLetters.characters.count
-
+//Swift4.0 String 是一个 Collection 类型  可以直接str.count
+coolLetters.count
 var chineseLetters = "慕课网"
 chineseLetters.characters.count
+//Swift4.0 String 是一个 Collection 类型  可以直接str.count
+chineseLetters.count
 
 var coolGuys = "\u{1F60E}\u{1F60E}\u{1F60E}"
 coolGuys.characters.count
+//Swift4.0 String 是一个 Collection 类型  可以直接str.count
+coolGuys.count
 
 var cafe = "café"
 var cafe2 = "cafe\u{0301}"
 cafe.characters.count
 cafe2.characters.count
+//Swift4.0 String 是一个 Collection 类型  可以直接str.count
+cafe.count
+cafe2.count
 
 
 // String的比较

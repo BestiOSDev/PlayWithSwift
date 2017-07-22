@@ -2,7 +2,7 @@
 
 import UIKit
 
-enum MyError: ErrorType{
+enum MyError : Error {
     case BothNilError
     case JustImpossible
 }

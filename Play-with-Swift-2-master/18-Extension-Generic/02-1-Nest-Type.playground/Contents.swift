@@ -13,29 +13,29 @@ class UI{
     var backgroundColor: UIColor!
     var themeMode: Theme = .DayMode{
         didSet{
-            self.changeTheme(self.themeMode)
+            self.changeTheme(themeMode: self.themeMode)
         }
     }
     
     init(){
         self.themeMode = .DayMode
-        self.changeTheme(self.themeMode)
+        self.changeTheme(themeMode: self.themeMode)
         
     }
     
     init(themeMode: Theme){
         self.themeMode = themeMode
-        self.changeTheme(themeMode)
+        self.changeTheme(themeMode: themeMode)
     }
     
     func changeTheme( themeMode: Theme ){
         switch(themeMode){
         case .DayMode:
-            fontColor = UIColor.blackColor()
-            backgroundColor = UIColor.whiteColor()
+            fontColor = UIColor.black
+            backgroundColor = UIColor.white
         case .NightMode:
-            fontColor = UIColor.whiteColor()
-            backgroundColor = UIColor.blackColor()
+            fontColor = UIColor.white
+            backgroundColor = UIColor.black
         }
     }
 }
@@ -55,5 +55,5 @@ ui.backgroundColor
 // 以前就见过Nest Type
 // String.Index
 let str = "Hello World"
-let index = str.startIndex.advancedBy(5)
-str.substringToIndex(index)
+let index = str.index(str.startIndex, offsetBy: 5)
+str.substring(to: index)

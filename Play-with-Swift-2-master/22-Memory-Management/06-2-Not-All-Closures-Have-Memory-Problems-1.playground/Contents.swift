@@ -6,7 +6,7 @@ class ScoreBook{
     
     var scores:[Int]
     static var changeScore: ((Int) -> Int)?
-    var printTitle: ()->() = { _ in
+    var printTitle: ()->() = {
         print("== SCORE BOOK ==")
     }
     

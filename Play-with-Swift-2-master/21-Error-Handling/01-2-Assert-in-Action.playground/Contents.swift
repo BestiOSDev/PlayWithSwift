@@ -16,8 +16,8 @@ protocol TurnBasedGame{
     func playerMove()
     func gameEnd()
     
-    optional func turnStart()
-    optional func turnEnd()
+    @objc optional func turnStart()
+    @objc optional func turnEnd()
     
     func gameOver() -> Bool
 }
@@ -107,14 +107,14 @@ class RockPaperScissors: SinglePlayerTurnBasedGame, TurnBasedGameDelegate{
         
         let yourShape = RockPaperScissors.go()
         let otherShape = RockPaperScissors.go()
-        print("Your:",show(yourShape))
-        print("Other:",show(otherShape))
+        print("Your:",show(hand: yourShape))
+        print("Other:",show(hand: otherShape))
         
-        if yourShape.beat(otherShape){
+        if yourShape.beat(shape: otherShape){
             print("You win this round")
             wins += 1
         }
-        else if otherShape.beat(yourShape){
+        else if otherShape.beat(shape: yourShape){
             print("You lose this round")
             otherWins += 1
         }

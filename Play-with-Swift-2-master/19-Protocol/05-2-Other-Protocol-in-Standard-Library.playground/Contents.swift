@@ -4,7 +4,7 @@ import UIKit
 
 
 // CustomStringConvertible and BooleanType
-struct Record: Equatable, Comparable, CustomStringConvertible, BooleanType{
+struct Record: Equatable, Comparable, CustomStringConvertible{
     
     var wins: Int
     var losses: Int
@@ -32,23 +32,25 @@ let record = Record(wins: 10, losses: 5)
 
 print( record )
 
-if record{
+if record.boolValue{
     print("Great!")
 }
 
 
-// 可以在extension中实现协议！
-// 局限：不能使用存储型变量
-extension Int: BooleanType{
-    public var boolValue: Bool{
-        return self != 0
-    }
-}
+// Swift3.0 废除了 BooleanType协议 因此 代码部分涉及到BooleanType 的 已经注释
 
+//// 可以在extension中实现协议！
+//// 局限：不能使用存储型变量
+//extension Int: BooleanType{
+//    public var boolValue: Bool{
+//        return self != 0
+//    }
+//}
+//
 var wins = 0
-if !wins{
-    print("You never win!")
-}
+//if !wins{
+//    print("You never win!")
+//}
 
 
 // extension of protocol? See you next Chapter!

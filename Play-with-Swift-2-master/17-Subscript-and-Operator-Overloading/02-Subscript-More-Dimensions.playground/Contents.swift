@@ -14,7 +14,7 @@ struct Matrix{
         self.c = col
         data = [[Double]]()
         for _ in 0..<r{
-            let aRow = Array(count: col, repeatedValue: 0.0)
+            let aRow = Array(repeating: 0.0, count: col)
             data.append(aRow)
         }
     }

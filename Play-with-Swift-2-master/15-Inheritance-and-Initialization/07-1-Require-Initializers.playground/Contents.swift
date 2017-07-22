@@ -49,7 +49,7 @@ class User: Avatar{
         super.init(name: name)
 
         if group == ""{
-            self.getScore(-10)
+            self.getScore(score: -10)
         }
     }
     
@@ -64,7 +64,7 @@ class User: Avatar{
     }
     
     static func generateUserName() -> String{
-        return "Player" + String(rand()%1_000_000)
+        return "Player" + String(Int(arc4random_uniform(1_000_000)))
     }
     
     final func getScore(score: Int){

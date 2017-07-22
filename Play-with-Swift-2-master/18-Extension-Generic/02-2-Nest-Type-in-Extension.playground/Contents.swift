@@ -52,13 +52,13 @@ extension Rectangle{
     subscript(index: Int) -> Point{
         
         assert( index >= 0 && index < 4 , "Index in Rectange Out of Range.")
-        return pointAtVertex(Vertex(rawValue: index)!)
+        return pointAtVertex(v: Vertex(rawValue: index)!)
     }
 }
 
 
 let rect = Rectangle(origin: Point(), size: Size(width: 4, height: 3))
-rect.pointAtVertex(.RightBottom)
+rect.pointAtVertex(v: .RightBottom)
 
 rect[0]
 rect[1]

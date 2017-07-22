@@ -91,7 +91,7 @@ public class Bicycle {
         if meters > 0 {
             distanceTravelled += meters
             // FIXME: Support Swift 2.2
-            numberOfTrips++
+            numberOfTrips+=1
         }
     }
     

@@ -82,7 +82,7 @@ class Monster: Avatar{
     }
     
     func attack( user: User , amount: Int ){
-        user.beAttacked(amount)
+        user.beAttacked(attack: amount)
     }
 }
 
@@ -109,8 +109,8 @@ for avatar in avatarArr{
     print(avatar.description)
 }
 
-monster.attack(player1, amount: 20)
+monster.attack(user: player1, amount: 20)
 player1.life
 
-monster.attack(player2, amount: 20)
+monster.attack(user: player2, amount: 20)
 player2.life

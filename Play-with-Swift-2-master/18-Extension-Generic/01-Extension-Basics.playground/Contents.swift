@@ -28,7 +28,7 @@ class Rectangle{
 extension Rectangle{
     
     // 如果是struct，就需要使用mutating关键字
-    func translate(x x: Double, y: Double){
+    func translate(x: Double, y: Double){
         
         self.origin.x += x
         self.origin.y += y

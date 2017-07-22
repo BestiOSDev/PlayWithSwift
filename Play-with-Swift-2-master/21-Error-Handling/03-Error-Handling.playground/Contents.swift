@@ -7,18 +7,18 @@ class VendingMachine{
     
     struct Item{
         
-        enum Type: String{
+        enum MyType: String{
             case Water
             case Cola
             case Juice
         }
         
-        let type:  Type
+        let type:  MyType
         let price: Int
         var count: Int
     }
     
-    enum Error: ErrorType, CustomStringConvertible{
+    enum MyError: Error, CustomStringConvertible{
         case NoSuchItem
         case NotEnoughMoney(Int)
         case OutOfStock
@@ -37,21 +37,21 @@ class VendingMachine{
                           "Orange Juice" : Item(type: .Juice, price: 5, count: 3)]
     
     
-    func vend(itemName itemName: String, money: Int) throws -> Int{
+    func vend(itemName: String, money: Int) throws -> Int{
         
         guard let item = items[itemName] else{
-            throw VendingMachine.Error.NoSuchItem
+            throw VendingMachine.MyError.NoSuchItem
         }
         
         guard money >= item.price else{
-            throw VendingMachine.Error.NotEnoughMoney(item.price)
+            throw VendingMachine.MyError.NotEnoughMoney(item.price)
         }
         
         guard item.count > 0 else{
-            throw VendingMachine.Error.OutOfStock
+            throw VendingMachine.MyError.OutOfStock
         }
         
-        dispenseItem(itemName)
+        dispenseItem(itemName: itemName)
         
         return money - item.price
     }
@@ -90,13 +90,13 @@ do{
     pocketMoney = try machine.vend(itemName: "Coca Cola", money: pocketMoney)
     print(pocketMoney,"Yuan left")
 }
-catch VendingMachine.Error.NoSuchItem{
+catch VendingMachine.MyError.NoSuchItem{
     print("No Such Item")
 }
-catch VendingMachine.Error.NotEnoughMoney(let price){
+catch VendingMachine.MyError.NotEnoughMoney(let price){
     print("Not Enough Money." , price , "Yuan needed.")
 }
-catch VendingMachine.Error.OutOfStock{
+catch VendingMachine.MyError.OutOfStock{
     print("Out of Stock")
 }
 catch{
@@ -108,7 +108,7 @@ do{
     pocketMoney = try machine.vend(itemName: "Coca Cola", money: pocketMoney)
     print(pocketMoney,"Yuan left")
 }
-catch let error as VendingMachine.Error{
+catch let error as VendingMachine.MyError{
     print(error)
 }
 catch{

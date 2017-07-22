@@ -45,10 +45,10 @@ player.isAlive
 player.score
 player.level
 
-player.beAttacked(20)
+player.beAttacked(attack: 20)
 player.life
 
-player.getScore(20)
+player.getScore(score: 20)
 player.score
 
 

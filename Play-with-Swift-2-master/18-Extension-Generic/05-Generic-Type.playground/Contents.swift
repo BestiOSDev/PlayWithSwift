@@ -44,8 +44,8 @@ extension Stack{
 
 
 var s = Stack<Int>()
-s.push(1)
-s.push(2)
+s.push(item: 1)
+s.push(item: 2)
 s.pop()
 
 var ss = Stack<String>()

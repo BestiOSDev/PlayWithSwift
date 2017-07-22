@@ -81,7 +81,7 @@ var baseballTeamRecord = BaseballRecord(wins: 10, losses: 5)
 var footballTeamRecord = FootballRecord(wins: 1, losses: 1, ties: 1)
 
 
-func award(one: protocol<CustomStringConvertible, Prizable>){
+func award(one: CustomStringConvertible & Prizable) {
     
     if one.isPrizable(){
         print(one)
@@ -93,7 +93,7 @@ func award(one: protocol<CustomStringConvertible, Prizable>){
     }
 }
 
-award(baseballTeamRecord)
+award(one: baseballTeamRecord)
 
 
 struct Student: CustomStringConvertible, Prizable{
@@ -109,6 +109,6 @@ struct Student: CustomStringConvertible, Prizable{
 }
 
 let liuyubobobo = Student(name: "liuyubobobo", score: 100)
-award(liuyubobobo)
+award(one: liuyubobobo)
 
 

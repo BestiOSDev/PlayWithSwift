@@ -38,7 +38,7 @@ struct Circle: Shape, HasArea{
     var radius: Double
     
     func area() -> Double{
-        return M_PI * radius * radius
+        return .pi * radius * radius
     }
 }
 

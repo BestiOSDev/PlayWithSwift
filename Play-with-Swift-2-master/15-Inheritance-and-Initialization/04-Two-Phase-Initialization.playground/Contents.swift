@@ -73,7 +73,7 @@ class User: Avatar{
         
         // Phase2: 所有成员变量初始化完成以后，进行成员变量相关的逻辑调整
         if self.group == ""{
-            getScore(-10)
+            getScore(score: -10)
             self.life -= 5
         }
     }
@@ -103,7 +103,7 @@ final class Magician: User {
     
     init(name: String){
         let defaultGroups = ["Gryffindor","Hufflepuff","Ravenclaw","Slytherin"]
-        let group = defaultGroups[random()%4]
+        let group = defaultGroups[Int(arc4random_uniform(4))]
         super.init(name: name, group: group)
     }
     

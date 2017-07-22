@@ -47,7 +47,7 @@ class Parrot: Bird, Pet{
 
 class Sparrow: Bird{
     
-    var color = UIColor.grayColor()
+    var color = UIColor.gray
 }
 
 
