@@ -23,12 +23,12 @@ extension Int{
         }
     }
     
-//    func stride(to end: Int, by stride: Int, task: (Int) -> Void ){
-//
-//        for i in stride(from: self, through: end, by: stride) {
-//            task(i)
-//        }
-//    }
+    func inStride(to end: Int, by length: Int, task: (Int) -> Void ){
+        for i in Swift.stride(from: self, through: end, by: length) {
+            task(i)
+        }
+
+    }
 }
 
 let num = 8
@@ -52,9 +52,9 @@ for i in stride(from: 2, through: 10, by: 2) {
     print(i)
 }
 
-//2.strideInt(to: 10, by: 2){ num in
-//    print(num*num)
-//}
+2.inStride(to: 10, by: 2) { (i) in
+    print(i)
+}
 //
 // Int还有很多可以做enxtension的地方
 // 如 12345[2]
