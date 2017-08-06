@@ -62,10 +62,10 @@ final class Cat: Animal, Pet{
 class Bird: Animal{
     
     var name: String = "Little Little Bird"
-    
     init(name: String){
         self.name = name
     }
+
 }
 
 

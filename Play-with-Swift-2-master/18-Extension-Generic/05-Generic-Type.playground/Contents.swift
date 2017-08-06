@@ -17,6 +17,9 @@ struct Stack<T>{
     }
     
     mutating func push(item: T){
+        var dict : Dictionary<String,Int> = [String : Int]()
+        dict.updateValue(100, forKey: "100"
+    )
         items.append(item)
     }
     
@@ -60,4 +63,7 @@ struct Pair<T1,T2>{
 
 var pair = Pair<Int,String>(a: 0 , b: "Hello")
 pair
+
+
+
 

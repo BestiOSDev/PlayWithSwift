@@ -4,8 +4,8 @@ import UIKit
 
 
 // Equatable and comparable
-struct Record: Equatable, Comparable{
-    
+// Comparable 是继承与 Equatable
+struct Record: Comparable {
     var wins: Int
     var losses: Int
 }
@@ -32,4 +32,6 @@ var team3Record = Record(wins: 8, losses: 8)
 var records = [team1Record,team2Record,team3Record]
 
 records.sort()
+print(recordA)
+
 
